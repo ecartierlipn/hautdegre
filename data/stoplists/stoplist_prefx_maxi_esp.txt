@@ -1,0 +1,5 @@
+maxi_NOUN --_ADP mes_DET
+maxi_X Fig_X
+maxi_ADJ male_NOUN
+maxi_ADJ maie_NOUN
+maxi_ADJ mum_NOUN

@@ -1,0 +1,7 @@
+hyper_ADV trophique_ADJ
+hyper_VERB thermie_NOUN
+hyper_PRT thermie_NOUN
+hyper_ADV trophiques_ADJ
+hyper_ADJ thermie_NOUN
+hyper_ADV plasiques_ADJ
+hyper_X Fig_X
