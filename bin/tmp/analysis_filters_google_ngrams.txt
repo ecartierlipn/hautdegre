@@ -1,0 +1,53 @@
+1-grams (sans POS)	10358
+après ^sur	5774
+après ~\d et ^(|s|\w{3,})$	5660
+après stoplist	2457
+hyper    877
+super    446
+extra    404
+supra    236
+ultra    191
+archi    156
+méga     141
+maxi       6
+
+voir fichier : ./tmp/df_prefixes_1grams.csv
+
+2-grams (sans POS)	26763
+après ^sur	2672
+après stoplist	1680
+après ~\d et ^(|s|\w{3,})$	1680
+super    628
+extra    394
+supra    293
+ultra    270
+hyper     66
+archi     16
+maxi      13
+
+voir fichier ./tmp/df_prefixes_2grams.csv
+
+3-grams (sans POS, sans ^sur)	3393
+après stoplist	3364
+après ~\d et ^(|s|\w{3,})$	2553
+extra    1103
+ultra     659
+super     425
+hyper     201
+archi     126
+méga       28
+maxi       11
+
+voir fichier ./tmp/df_prefixes_3grams.csv
+
+Dataframe commun : 7682
+extra    1507
+hyper    1078
+super     871
+ultra     850
+archi     282
+supra     236
+méga      169
+maxi       17
+
+voir fichier ../data/df_googlengrams_all.csv
