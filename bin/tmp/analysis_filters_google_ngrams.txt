@@ -1,4 +1,15 @@
+
+architecte	1789	45
+architecte_NOUN	1789 34
+architecte_DET	1789	11
+
+archi gramme	1789	10
+
+=> vérifier que les formes sans tags sont bien le cumul des occurrences taggées
+
+
 1-grams (sans POS)	10358
+
 après ^sur	5774
 après ~\d et ^(|s|\w{3,})$	5660
 après stoplist	2457
@@ -29,6 +40,10 @@ voir fichier ./tmp/df_prefixes_2grams.csv
 
 3-grams (sans POS, sans ^sur)	3393
 après stoplist	3364
+
+=> vérifier s'il n'y a pas d'autres "stopwords"
+=> vérifier les stoplists
+
 après ~\d et ^(|s|\w{3,})$	2553
 extra    1103
 ultra     659
@@ -39,6 +54,7 @@ méga       28
 maxi       11
 
 voir fichier ./tmp/df_prefixes_3grams.csv
+
 
 Dataframe commun : 7682
 extra    1507
