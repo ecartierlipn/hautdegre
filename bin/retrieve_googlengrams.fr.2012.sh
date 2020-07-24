@@ -62,6 +62,6 @@ cd ../data_ngrams/googlengrams.fr.2012
 
 for file in *.gz
 do
-  zgrep -h -i -E '^(archi|extra|hyper|hypra|maxi|méga|super|ultra)[ \w-]+(18|19|20)[0-9]{2}' $file  | grep -v '_' > $file.cleaned.csv
+  zgrep -h -i -E '^(archi|extra|hyper|hypra|maxi|méga|super|supra|ultra)[ \w-]+(18|19|20)[0-9]{2}' $file  | grep -v '_' > $file.cleaned.csv
   echo "$file parsed"
 done
