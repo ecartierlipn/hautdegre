@@ -22,23 +22,20 @@ Except explicited, all files are generated :
 
 Step | Generated files | Contents Explanation
 ------------ | ------------- | -------------
-**1 : generic filtering from raw data** | `fre.2012.prefixes.1.grams.1799-2009.csv`<br/> `fre.2012.prefixes.2.grams.1799-2009.csv`<br/> `fre.2012.prefixes.3.grams.1799-2009.csv` | the list of retained strings after several low-level filtering. Format : string, and for every year (as columns) the absolute count of occurrences
-**2a : stoplist removal** | `df_prefixes_allgrams.2012.after_stoplist.csv`<br/>`df_prefixes_1grams.2012_after_stoplist.csv`<br/> `df_prefixes_2grams.2012_after_stoplist.csv`<br/> `df_prefixes_3grams.2012_after_stoplist.csv`|  the complete ngrams datafile after stoplist removal, and split of string into prefix, word and separator; same format as preceding + word, sep and prefix columns added
-**2b : PHD filtering** | `df_prefixes_allgrams.2012.after_phd_filtering.csv` | this file contains all data after PHD string filtering (see `../data/stoplists/phd.csv`, which contains the list of strings); same format as preceding
-**3 : potential POS tags** | `df_prefixes_allgrams.2012.after_pos_tagging.csv` | the same as above, but with adding the potential pos tags for every base (see `../data/dico_morph/*` for the dictionary used for this process.). Same format as preceding + pos column. 
-**4 : outliers removal (absolute frequencies)** | `df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` (copy of the preceding)<br/>`df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` | the same as above WITHOUT outliers; 
-**4 : outliers removal (relative frequencies)** |  `df_prefixes_allgrams.2012.freq_rel.csv`<br/>`df_prefixes_allgrams.2012.freq_rel.no_outliers.csv` | the same as above but with relative frequencies;
-**5 : Néoveille versions of reference data** |  `df_prefixes_allgrams.2012.freq_abs.neoveille.csv`<br/>`df_prefixes_allgrams.2012.freq_abs.no_outliers.neoveille.csv` <br/> `df_prefixes_allgrams.2012.freq_rel.neoveille.csv`<br/>`df_prefixes_allgrams.2012.freq_rel.no_outliers.neoveille.csv` | the same as above but in the Néoveille platform adequate format (string, prefix, sep, pos, freq, year);
+**1** | `fre.2012.prefixes.1.grams.1799-2009.csv`<br/> `fre.2012.prefixes.2.grams.1799-2009.csv`<br/> `fre.2012.prefixes.3.grams.1799-2009.csv` | **Low-level filtering**. Format : string, and for every year (as columns) the absolute count of occurrences
+**2a** | `df_prefixes_allgrams.2012.after_stoplist.csv`<br/>`df_prefixes_1grams.2012_after_stoplist.csv`<br/> `df_prefixes_2grams.2012_after_stoplist.csv`<br/> `df_prefixes_3grams.2012_after_stoplist.csv`|  **stoplist removal**: the complete ngrams datafile after stoplist removal, and split of string into prefix, word and separator; same format as preceding + word, sep and prefix columns added
+**2b** | `df_prefixes_allgrams.2012.after_phd_filtering.csv` | **PHD filtering**: this file contains all data after PHD string filtering (see `../data/stoplists/phd.csv`, which contains the list of strings); same format as preceding
+**3** | `df_prefixes_allgrams.2012.after_pos_tagging.csv` | **Potential POS tags** : the same as above, but with adding the potential pos tags for every base (see `../data/dico_morph/*` for the dictionary used for this process.). Same format as preceding + pos column. 
+**4** | `df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` (copy of the preceding)<br/>`df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` |  **Outliers removal (absolute frequencies)** : the same as above WITHOUT outliers; 
+**4** |  `df_prefixes_allgrams.2012.freq_rel.csv`<br/>`df_prefixes_allgrams.2012.freq_rel.no_outliers.csv` | **Relative frequencies** : the same as above but with relative frequencies;
+**5** |  `df_prefixes_allgrams.2012.freq_abs.neoveille.csv`<br/>`df_prefixes_allgrams.2012.freq_abs.no_outliers.neoveille.csv` <br/> `df_prefixes_allgrams.2012.freq_rel.neoveille.csv`<br/>`df_prefixes_allgrams.2012.freq_rel.no_outliers.neoveille.csv` | **Néoveille reference data** : the same as above but in the Néoveille platform format (string, prefix, sep, pos, freq, year)
 
-> **_NOTE:_** those just interested in the final data should consider these couple of files (the first one in this project format , the second one in the néoveille format) : 
+> **_NOTE:_** those just interested in the final data should consider the files at the 4 and 5 steps. 
 
 - `google_ngrams_fr_2012.exploratory_analysis.ipynb` : this notebook parse the reference data generated above, and generate pdf or xls synthesis in the `../visu/` subdirectory. Notably you will find :
 
 File |  Contents
 ------------ | ------------- | -------------
-
-**`../data/reference/df_googlengrams_all_freq_rel.2012.csv`**.
-Several statistics and visualizations synthesis from the above file are generated in the`../visu` subdirectory (see `readme.md` in this directory;
 
 
 ### Google Ngrams 2020 version  :
