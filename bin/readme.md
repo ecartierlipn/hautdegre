@@ -23,7 +23,7 @@ The programs in this directory enable to download, parse these respective corpor
     - **Step 4 : outliers removal (relative frequencies)** :`../data/reference/df_googlengrams_all_freq_rel.2012.csv` : the same as above but with relative frequencies; (`../data/reference/df_googlengrams_all_withfreq_rel.2012.csv` without PHD filtering);
     - **Same files for Néoveille exploration** : `../data/reference/df_googlengrams_neoveille.freqrel.2012.csv`,`df_googlengrams_neoveille.freq_abs.2012`: the same as above but formatted for néoveille platform exploration (relative frequency ans absolute frequency);
 
-
+<font size="-1">
 Step | Generated files | Contents Explanation
 ------------ | ------------- | -------------
 **Step 1 : generic filtering from raw data** | `../data/fre.2012.prefixes.1.grams.1799-2009.csv`<br/> `../data/fre.2012.prefixes.2.grams.1799-2009.csv`<br/> `../data/fre.2012.prefixes.3.grams.1799-2009.csv` | the list of retained strings after several low-level filtering (normalize strings : lowercase(), and convert \s+--?\s+ to ' -'; Check form of string (see regexp for query1gram, query2ram and query3gram) and drop string with integers; merge rows with same string values (after lowercase and normalization of -) : the csv files contain on every line the string, and for every year the count of occurrences;
@@ -33,6 +33,7 @@ Step | Generated files | Contents Explanation
 **Step 4 : outliers removal (absolute frequencies)** | `../data/reference/df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` | the same as above WITHOUT outliers; 
 **Step 4 : outliers removal (relative frequencies)** |  `../data/reference/df_prefixes_allgrams.2012.freq_rel.csv`<br/>`../data/reference/df_prefixes_allgrams.2012.freq_rel.no_outliers.csv` | the same as above but with relative frequencies;
 **Step 5 : Néoveille versions of reference data** |  `../data/reference/df_prefixes_allgrams.2012.freq_abs.neoveille.csv`<br/>`../data/reference/df_prefixes_allgrams.2012.freq_abs.no_outliers.neoveille.csv` <br/> `../data/reference/df_prefixes_allgrams.2012.freq_rel.neoveille.csv`<br/>`../data/reference/df_prefixes_allgrams.2012.freq_rel.no_outliers.neoveille.csv` | the same as above but in the Néoveille platform adequate format (string, prefix, sep, pos, freq, year);
+</font>
 
 > **_NOTE:_** those just interested in the final data should consider these files : **`../data/reference/df_googlengrams_all_freq_rel.2012.csv`**.
 Several statistics and visualizations synthesis from the above file are generated in the`../visu` subdirectory (see `readme.md` in this directory;
