@@ -25,7 +25,7 @@ The programs in this directory enable to download, parse these respective corpor
 
 
 Step | Generated files | Contents Explanation
------------- | -------------
+------------ | ------------- | -------------
 **Step 1 : generic filtering from raw data** | `../data/fre.2012.prefixes.1.grams.1799-2009.csv`<br/> `../data/fre.2012.prefixes.2.grams.1799-2009.csv`<br/> `../data/fre.2012.prefixes.3.grams.1799-2009.csv` | the list of retained strings after several low-level filtering (normalize strings : lowercase(), and convert \s+--?\s+ to ' -'; Check form of string (see regexp for query1gram, query2ram and query3gram) and drop string with integers; merge rows with same string values (after lowercase and normalization of -) : the csv files contain on every line the string, and for every year the count of occurrences;
 **Step 2a : stoplist removal** | `../data/df_prefixes_allgrams.2012.after_stoplist.csv`<br/>`../data/df_prefixes_1grams.2012_after_stoplist.csv`<br/> `../data/df_prefixes_2grams.2012_after_stoplist.csv`<br/> `../data/df_prefixes_3grams.2012_after_stoplist.csv`|  the complete ngrams datafile after stoplist removal, and split of string into prefix, word and separator; every line contain this data and the absolute count per year; first file contains all 1, 2 and 3-grams; the others contain 1,2 and 3-grams only;
 **Step 2b : PHD filtering** | `../data/df_prefixes_allgrams.2012.after_phd_filtering.csv` : this file contains all data after PHD string filtering (see `../data/stoplists/phd.csv`, which contains the list of strings)
