@@ -16,7 +16,6 @@ Generated files | Explanation
 In the `reference` subdirectory :
 Generated files | Explanation
 ------------- | -------------
-
 `df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` <br/>`df_prefixes_allgrams.2012.freq_abs.no_outliers.csv` |  **Absolute frequencies (with and without outliers)** : the first file is a copy of the preceding file, and the second the same WITHOUT outliers; 
 `df_prefixes_allgrams.2012.freq_rel.csv`<br/>`df_prefixes_allgrams.2012.freq_rel.no_outliers.csv` | **Relative frequencies (with and without outliers)** : the same as above but with relative frequencies;
 `df_prefixes_allgrams.2012.freq_abs.neoveille.csv`<br/>`df_prefixes_allgrams.2012.freq_abs.no_outliers.neoveille.csv` <br/> `df_prefixes_allgrams.2012.freq_rel.neoveille.csv`<br/>`df_prefixes_allgrams.2012.freq_rel.no_outliers.neoveille.csv` | **Néoveille reference data** : the same as above but in the Néoveille platform format (string, prefix, sep, pos, freq, year)
@@ -24,7 +23,6 @@ Generated files | Explanation
 In the `stoplists` subdirectory :
 Generated files | Explanation
 ------------- | -------------
-
 `phd.csv` |  **List of PHD (Préfixes à Haut Degré - High Degree Prefixes)**  
 `stopwords_1grams.txt` | **List of 1gram stopwords**
 `stopwords_2grams.txt` | **List of 2gram stopwords**
@@ -33,7 +31,6 @@ Generated files | Explanation
 In the `dico_morph` subdirectory :
 Generated files | Explanation
 ------------- | -------------
-
 `morfetik.pickle` |  **Morfetik dictionary in a pickle format (Python dictionary)**  
 `morfetik.xml.zip` | **XML format Morfertik French dictionary **
 
