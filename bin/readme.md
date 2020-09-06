@@ -13,14 +13,10 @@ The programs in this directory enable to download, parse these respective corpor
 ## Google Ngrams
 
 ### Google Ngrams 2012 version (Cartier et Huyghe, submitted):
-- `retrieve_googlengrams.fr.2012.sh` : this shell script download the necessary raw gz files and extract the lines containing one of the prefixes; results are generated in the `../data_ngrams/googlengrams.fr.2012` directory with a cleaned.csv file for every corresponding gz gile; see shell script for details; (warning : generated files are not included here, they are too big)
-- `google_ngrams_fr_2012.processing.ipynb` : this notebook parse the preceding `*.cleaned.csv` files and generate the following files :
+- **`retrieve_googlengrams.fr.2012.sh`** : this shell script download the necessary raw gz files and extract the lines containing one of the prefixes; results are generated in the `../data_ngrams/googlengrams.fr.2012` directory with a cleaned.csv file for every corresponding gz gile; see shell script for details; (warning : generated files are not included here, they are too big)
+- **`google_ngrams_fr_2012.processing.ipynb`** : this notebook parse the preceding `*.cleaned.csv` files and generate the following files (except explicited, all files are generated  : step 1 to 3 : in the `../data` subdirectory, step 4 and 5 : in the `../data/reference` subdirectory):
 
-Except explicited, all files are generated :
-- step 1 to 3 : in the `../data` subdirectory,
-- step 4 and 5 : in the `../data/reference` subdirectory.
-
-Step | Generated files | Contents Explanation
+Step | Generated files | Explanation
 ------------ | ------------- | -------------
 **1** | `fre.2012.prefixes.1.grams.1799-2009.csv`<br/> `fre.2012.prefixes.2.grams.1799-2009.csv`<br/> `fre.2012.prefixes.3.grams.1799-2009.csv` | **Low-level filtering**. Format : string, and for every year (as columns) the absolute count of occurrences
 **2a** | `df_prefixes_allgrams.2012.after_stoplist.csv`<br/>`df_prefixes_1grams.2012_after_stoplist.csv`<br/> `df_prefixes_2grams.2012_after_stoplist.csv`<br/> `df_prefixes_3grams.2012_after_stoplist.csv`|  **stoplist removal**: the complete ngrams datafile after stoplist removal, and split of string into prefix, word and separator; same format as preceding + word, sep and prefix columns added
@@ -32,15 +28,17 @@ Step | Generated files | Contents Explanation
 
 > **_NOTE:_** those just interested in the final data should consider the files at the 4 and 5 steps. 
 
-- `google_ngrams_fr_2012.exploratory_analysis.ipynb` : this notebook parse the reference data generated above, and generate pdf or xls synthesis in the `../visu/` subdirectory. Notably you will find :
+- **`google_ngrams_fr_2012.exploratory_analysis.ipynb`** : this notebook parse the reference data generated above (), and generate pdf or xls synthesis in the `../visu/` subdirectory. Notably you will find (we just cover the `df_prefixes_allgrams.2012.freq_rel.no_outliers.csv` file but you can change the input file in the notebook):
 
 File |  Contents
------------- | ------------- | -------------
-
+------------ | ------------- 
+`df_prefixes_allgrams.2012.freq_rel.no_outliers.synthesis.xls` |
+`df_prefixes_allgrams.2012.freq_rel.no_outliers.synthesis.pdf` |
+`df_prefixes_allgrams.2012.freq_rel.no_outliers.__prefix__.synthesis.pdf` | where __prefix__ if one of the prefix : a synthesis for every prefix.
 
 ### Google Ngrams 2020 version  :
 - `retrieve_googlengrams.fr.2020.sh` : this shell script download the necessary raw gz files and extract the lines containing one of the prefixes; results are generated in the `../data_ngrams/googlengrams.fr.2020` directory with a cleaned.csv file for every corresponding gz gile; see shell script for details;
-- `google_ngrams_fr_2020.processing` : this notebook parse the preceding `*.cleaned.csv` files and generate the same files as for the 2012 version but with the 2020 specification int the filenames. this work-in-progress.
+- `google_ngrams_fr_2020.processing` : this notebook parse the preceding `*.cleaned.csv` files and generate the same files as for the 2012 version but with the 2020 specification into the filenames. this is work-in-progress.
     
 
 
