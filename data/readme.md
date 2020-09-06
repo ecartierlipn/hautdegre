@@ -32,7 +32,7 @@ In the `dico_morph` subdirectory :
 Generated files | Explanation
 ------------- | -------------
 `morfetik.pickle` |  **Morfetik dictionary in a pickle format (Python dictionary)**  
-`morfetik.xml.zip` | **XML format Morfertik French dictionary **
+`morfetik.xml.zip` | **XML format Morfetik French dictionary**
 
 
 
